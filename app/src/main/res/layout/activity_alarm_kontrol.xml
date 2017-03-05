@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_alarm_kontrol"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.serkanozaydin.evkontrolapp.AlarmKontrol"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timepicker"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"></TimePicker>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/timepicker"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="41dp"
+                >
+                <CheckBox
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pazartesi"
+                    android:id="@+id/Pazartesi"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salı"
+                    android:id="@+id/Sali"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Çarşamba"
+                    android:id="@+id/carsamba"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perşembe"
+                    android:id="@+id/persembe"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cuma"
+                    android:id="@+id/cuma"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cumartesi"
+                    android:id="@+id/cumartesi"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pazar"
+                    android:id="@+id/pazar"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pazartesi:"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="70dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pazartesiAlarm"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salı:"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="70dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saliAlarm"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Çarşamba:"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="70dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/carsambaAlarm"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perşembe:"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="70dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/persembeAlarm"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cuma:"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="70dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cumaAlarm"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cumartesi:"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="70dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cumartesiAlarm"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pazar:"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="70dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pazarAlarm"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                android:weightSum="1">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/AlarmKur"
+                    android:text="AlarmKur"
+                    android:gravity="center"/>
+
+                <Button
+                    android:layout_width="401dp"
+                    android:layout_height="wrap_content"
+                    android:text="Alarmı Kaldır"
+                    android:id="@+id/AlarmKaldir"
+                    android:layout_weight="0.28"></Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alarmları Kapat"
+                android:id="@+id/AlarmKapat"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alarm durdur"
+                android:id="@+id/AlarmDurdur"/>
+            </LinearLayout>
+    </ScrollView>
+        </LinearLayout>
+   </ScrollView>
+
+
+</RelativeLayout>
