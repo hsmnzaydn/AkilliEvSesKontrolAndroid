@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".KumandaKontrolActivity" />
-        <activity android:name=".AlarmKontrolActivity"></activity>
+        <activity android:name=".AlarmKontrolActivity" />
+        <activity android:name=".HatirlaticiActivity"></activity>
     </application>
 
 </manifest>

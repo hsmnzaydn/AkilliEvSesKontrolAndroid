@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView speak,butonKumanda,butonAlarm;
+    ImageView speak,butonKumanda,butonAlarm,butonHatirlatici;
     TextView komut,cikti;
     public Intent intent;
     public static final int request_code_voice = 1;
@@ -38,11 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        speak= (ImageView)findViewById(R.id.ImgSpeak);
-        komut= (TextView) findViewById(R.id.cikti);
-        cikti= (TextView) findViewById(R.id.gelen);
-        butonKumanda= (ImageView) findViewById(R.id.BtnKumanda);
-        butonAlarm= (ImageView) findViewById(R.id.BtnAlarm);
+        init();
 
         cikti_db.addValueEventListener(new ValueEventListener() {
             @Override
@@ -125,6 +121,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        butonHatirlatici.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_UP: {
+
+                        ImageView view = (ImageView) v;
+                        view.clearColorFilter();
+                        view.invalidate();
+                        Toast.makeText(getApplicationContext(),"Hatırlatıcı kontrol",Toast.LENGTH_SHORT).show();
+                        Intent ileri=new Intent(getApplicationContext(),HatirlaticiActivity.class);
+                        startActivity(ileri);
+                    }
+                    case MotionEvent.ACTION_DOWN: {
+                        ImageView view = (ImageView) v;
+                        view.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+                        view.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_CANCEL: {
+                        ImageView view = (ImageView) v;
+                        view.clearColorFilter();
+                        view.invalidate();
+                        break;
+
+                    }
+                }
+
+
+                return true;
+            }
+        });
+
+
 
 
 
@@ -188,6 +218,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void init(){
+        speak= (ImageView)findViewById(R.id.ImgSpeak);
+        komut= (TextView) findViewById(R.id.cikti);
+        cikti= (TextView) findViewById(R.id.gelen);
+        butonKumanda= (ImageView) findViewById(R.id.BtnKumanda);
+        butonAlarm= (ImageView) findViewById(R.id.BtnAlarm);
+        butonHatirlatici= (ImageView) findViewById(R.id.BtnHatirlatici);
     }
 
     @Override
