@@ -4,7 +4,7 @@
     android:id="@+id/activity_kumanda_kontrol"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.serkanozaydin.evkontrolapp.KumandaKontrol">
+    tools:context="net.serkanozaydin.evkontrolapp.KumandaKontrolActivity">
 
 
     <ScrollView

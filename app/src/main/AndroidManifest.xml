@@ -15,8 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".KumandaKontrol" />
-        <activity android:name=".AlarmKontrol"></activity>
+        <activity android:name=".KumandaKontrolActivity" />
+        <activity android:name=".AlarmKontrolActivity"></activity>
     </application>
 
 </manifest>

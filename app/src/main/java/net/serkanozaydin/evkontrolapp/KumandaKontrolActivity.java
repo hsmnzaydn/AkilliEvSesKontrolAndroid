@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class KumandaKontrol extends AppCompatActivity {
+public class KumandaKontrolActivity extends AppCompatActivity {
     ImageView next,stop,previous,start,plus,negative;
     ListView playlist;
     int sayac=0;

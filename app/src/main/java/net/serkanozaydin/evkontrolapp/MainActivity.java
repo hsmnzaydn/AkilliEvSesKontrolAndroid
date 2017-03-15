@@ -7,13 +7,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.speech.RecognizerIntent;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +22,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ImageView speak,butonKumanda,butonAlarm;
@@ -71,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         view.clearColorFilter();
                         view.invalidate();
                         Toast.makeText(getApplicationContext(),"Kumanda kontrol",Toast.LENGTH_SHORT).show();
-                        Intent ileri=new Intent(getApplicationContext(),KumandaKontrol.class);
+                        Intent ileri=new Intent(getApplicationContext(),KumandaKontrolActivity.class);
                         startActivity(ileri);
                     }
                     case MotionEvent.ACTION_DOWN: {
@@ -106,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                         view.clearColorFilter();
                         view.invalidate();
                         Toast.makeText(getApplicationContext(),"Kumanda kontrol",Toast.LENGTH_SHORT).show();
-                        Intent ileri=new Intent(getApplicationContext(),AlarmKontrol.class);
+                        Intent ileri=new Intent(getApplicationContext(),AlarmKontrolActivity.class);
                         startActivity(ileri);
                     }
                     case MotionEvent.ACTION_DOWN: {

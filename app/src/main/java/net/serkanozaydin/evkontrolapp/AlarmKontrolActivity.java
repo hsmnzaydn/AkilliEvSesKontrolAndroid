@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class AlarmKontrol extends Activity {
+public class AlarmKontrolActivity extends Activity {
 Button AlarmKur,AlarmKaldir,AlarmDurdur,AlarmKapat;
    CheckBox pazartesi,sali,carsamba,persembe,cuma,cumartesi,pazar;
     TextView pazartesiAlarm,saliAlarm,carsambaAlarm,persembeAlarm,cumaAlarm,cumartesiAlarm,pazarAlarm;
