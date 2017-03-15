@@ -23,11 +23,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/*Hüseyin Serkan Özaydin*/
 public class KumandaKontrolActivity extends AppCompatActivity {
     ImageView next,stop,previous,start,plus,negative;
+    Button btnMp3Guncelle;
     ListView playlist;
     int sayac=0;
     int ses_seviyesi;
+
+
 
     String[] muzik_list={"pop","rock","damar"};
 
@@ -42,6 +46,7 @@ public class KumandaKontrolActivity extends AppCompatActivity {
         init();
 
 
+        //Firebasedeki ses seviyesini kontrol ediyor
         ses_db.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -53,6 +58,8 @@ public class KumandaKontrolActivity extends AppCompatActivity {
 
             }
         });
+
+        //playlistte bulunan mp3 dosyasını çalıştırmak için kullanıyor
         start.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -99,6 +106,7 @@ public class KumandaKontrolActivity extends AppCompatActivity {
         });
 
 
+        //playlistte bulunan bir sonraki mp3 dosyasını çalıştırmak için kullanıyor
 
         next.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -131,7 +139,7 @@ public class KumandaKontrolActivity extends AppCompatActivity {
             }
         });
 
-
+        //playlistte bulunan bir önceki mp3 dosyasını çalıştırmak için kullanıyor
         previous.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -164,6 +172,7 @@ public class KumandaKontrolActivity extends AppCompatActivity {
             }
         });
 
+        //çalan mp3 dosyasını durdurmak için kullanıyor
         stop.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -197,7 +206,7 @@ public class KumandaKontrolActivity extends AppCompatActivity {
             }
         });
 
-
+        //İstenen playlisti çalmak için kullanılıyor
         ArrayAdapter adapter=new ArrayAdapter(getApplicationContext(),android.R.layout.simple_list_item_1,muzik_list);
         playlist.setAdapter(adapter);
 
@@ -211,6 +220,8 @@ public class KumandaKontrolActivity extends AppCompatActivity {
             }
         });
 
+
+        //mp3 ses seviyesi arttırır
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -227,7 +238,7 @@ public class KumandaKontrolActivity extends AppCompatActivity {
 
             }
         });
-
+        //mp3 ses seviyesi azaltır
         negative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -248,6 +259,15 @@ public class KumandaKontrolActivity extends AppCompatActivity {
             }
         });
 
+        //mp3 dosyalarını güncellemek için kullanıyor
+
+        btnMp3Guncelle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                komut_db.setValue("mp3 güncelle");//Komut değişkenine "mp3 güncelle" textini yollar
+                Log.i("Bilgi","mp3 güncelleye tıkladı");
+            }
+        });
 
 
 
@@ -264,6 +284,7 @@ public class KumandaKontrolActivity extends AppCompatActivity {
         negative= (ImageView) findViewById(R.id.IMGnegative);
 
         playlist= (ListView) findViewById(R.id.LISTmp3liste);
+        btnMp3Guncelle= (Button) findViewById(R.id.btnMp3Guncelle);
 
     }
 }
