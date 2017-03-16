@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         init();
 
+        //Sistemde oluşan uyarılar ve bildirilerin gösterildiği kısım
         cikti_db.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //Kumanda activitysine geçmek için kullanılan buton
         butonKumanda.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+        //Alarm activitysine geçmek için kullanılan buton
         butonAlarm.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -121,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Hatırlatıcı activitysine geçmek için kullanılan buton
         butonHatirlatici.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -159,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        //Sesi yazıya geçirmek için kullanılan alan
         speak.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -220,6 +222,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Xml dosyasındanki verileri javaya bağlamak için oluşturulan yöntem
     public void init(){
         speak= (ImageView)findViewById(R.id.ImgSpeak);
         komut= (TextView) findViewById(R.id.cikti);
@@ -229,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
         butonHatirlatici= (ImageView) findViewById(R.id.BtnHatirlatici);
     }
 
+    //ses komutlarını texte çevirmek için kullandık
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
