@@ -26,6 +26,32 @@
         android:textStyle="bold"
         android:layout_gravity="center"
         android:id="@+id/BtnTarih"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saat Seçiniz"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saat Seç"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:id="@+id/BtnSaat"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/EDTGorev"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Kaydet"
+            android:id="@+id/BTNkaydet"/>
+
 
 
 
