@@ -89,6 +89,28 @@
         android:layout_gravity="center"
         android:id="@+id/btnMp3Guncelle"/>
 
+    <TextView
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Senaryolar"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evden Çıkıyorum"
+        android:layout_gravity="center"
+        android:id="@+id/BTNevdenCikiyorum"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Eve geldim"
+        android:id="@+id/BTNeveGeldim"/>
+
+
 
 
 

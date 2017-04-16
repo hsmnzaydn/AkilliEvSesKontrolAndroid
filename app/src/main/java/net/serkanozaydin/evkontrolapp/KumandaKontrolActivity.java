@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 /*Hüseyin Serkan Özaydin*/
 public class KumandaKontrolActivity extends AppCompatActivity {
     ImageView next,stop,previous,start,plus,negative;
-    Button btnMp3Guncelle;
+    Button btnMp3Guncelle,btnEvdenCikiyorum,btnEveGeldim;
     ListView playlist;
     int sayac=0;
     int ses_seviyesi;
@@ -269,6 +269,21 @@ public class KumandaKontrolActivity extends AppCompatActivity {
             }
         });
 
+        btnEveGeldim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                komut_db.setValue("eve geldim");//Komut değişkenine "mp3 güncelle" textini yollar
+
+            }
+        });
+
+        btnEvdenCikiyorum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                komut_db.setValue("evden çıkıyorum");//Komut değişkenine "mp3 güncelle" textini yollar
+
+            }
+        });
 
 
 
@@ -282,6 +297,8 @@ public class KumandaKontrolActivity extends AppCompatActivity {
         start= (ImageView) findViewById(R.id.IMGplay);
         plus= (ImageView) findViewById(R.id.IMGplus);
         negative= (ImageView) findViewById(R.id.IMGnegative);
+        btnEveGeldim= (Button) findViewById(R.id.BTNeveGeldim);
+        btnEvdenCikiyorum= (Button) findViewById(R.id.BTNevdenCikiyorum);
 
         playlist= (ListView) findViewById(R.id.LISTmp3liste);
         btnMp3Guncelle= (Button) findViewById(R.id.btnMp3Guncelle);

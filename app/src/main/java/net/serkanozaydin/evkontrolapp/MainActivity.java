@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Hatırlatıcı activitysine geçmek için kullanılan buton
+   /*     //Hatırlatıcı activitysine geçmek için kullanılan buton
         butonHatirlatici.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+*/
 
 
         //Sesi yazıya geçirmek için kullanılan alan
@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
         cikti= (TextView) findViewById(R.id.gelen);
         butonKumanda= (ImageView) findViewById(R.id.BtnKumanda);
         butonAlarm= (ImageView) findViewById(R.id.BtnAlarm);
-        butonHatirlatici= (ImageView) findViewById(R.id.BtnHatirlatici);
+       // butonHatirlatici= (ImageView) findViewById(R.id.BtnHatirlatici);
     }
 
     //ses komutlarını texte çevirmek için kullandık
