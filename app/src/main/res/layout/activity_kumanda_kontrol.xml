@@ -111,6 +111,29 @@
         android:id="@+id/BTNeveGeldim"/>
 
 
+    <TextView
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Led Kontrol"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Led Aç"
+        android:layout_gravity="center"
+        android:id="@+id/BTNledAc"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Led Kapat"
+        android:id="@+id/BTNledKapat"/>
+
+
+
 
 
 

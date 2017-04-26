@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 /*Hüseyin Serkan Özaydin*/
 public class KumandaKontrolActivity extends AppCompatActivity {
     ImageView next,stop,previous,start,plus,negative;
-    Button btnMp3Guncelle,btnEvdenCikiyorum,btnEveGeldim;
+    Button btnMp3Guncelle,btnEvdenCikiyorum,btnEveGeldim,btnLedAc,btnLedKapat;
     ListView playlist;
     int sayac=0;
     int ses_seviyesi;
@@ -285,6 +285,21 @@ public class KumandaKontrolActivity extends AppCompatActivity {
             }
         });
 
+        btnLedAc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                komut_db.setValue("ışık yak");
+            }
+        });
+
+        btnLedKapat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                komut_db.setValue("ışık söndür");
+
+            }
+        });
+
 
 
     }
@@ -299,6 +314,8 @@ public class KumandaKontrolActivity extends AppCompatActivity {
         negative= (ImageView) findViewById(R.id.IMGnegative);
         btnEveGeldim= (Button) findViewById(R.id.BTNeveGeldim);
         btnEvdenCikiyorum= (Button) findViewById(R.id.BTNevdenCikiyorum);
+        btnLedKapat= (Button) findViewById(R.id.BTNledKapat);
+        btnLedAc= (Button) findViewById(R.id.BTNledAc);
 
         playlist= (ListView) findViewById(R.id.LISTmp3liste);
         btnMp3Guncelle= (Button) findViewById(R.id.btnMp3Guncelle);
